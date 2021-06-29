@@ -8,8 +8,351 @@
   <title>Portfólio Lucas Luz - Desenvolvedor Front-End</title>
 
 
+  <!-- Pre-sets -->
+  <link rel="stylesheet" href="assets/css/root.css">
+  <link rel="stylesheet" href="assets/css/teste.css">
+  <link rel="stylesheet" href="assets/css/nav.css">
+  <!-- Mobile -->
+  <link rel="stylesheet" href="assets/css/mobile.css">
+  <link rel="stylesheet" media="(min-width:680px)" href="assets/css/680px.css">
+  <link rel="stylesheet" media="(min-width:768px)" href="assets/css/768px.css">
+  <!-- Desktop -->
+  <link rel="stylesheet" media="(min-width:992px)" href="assets/css/992px.css">
+  <link rel="stylesheet" media="(min-width:1200px)" href="assets/css/1200px.css">
+  <link rel="stylesheet" media="(min-width:1400px)" href="assets/css/1400px.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+<body>
+
+  <header>
+    <div class="nav-bar">
+      <div class="nav-button"><!-- <i class="fas fa-bars"></i> -->
+        <div class="burger" data-burger="inativo">
+        <div class="burger-button" data-filho-burger="inativo"></div>
+        <div class="burger-button" data-filho-burger="inativo"></div>
+        <div class="burger-button" data-filho-burger="inativo"></div>
+      </div>
+      </div>
+      <div class="nome-portfolio">
+         <p>Portfólio</p>
+      </div>
+
+      <ul class="nav-itens">
+         <li class="nav-item"><a href="projetos" data-target="projetos">Projetos</a></li>
+         <li class="nav-item"><a href="conhecimentos" data-target="conhecimentos">Conhecimentos</a></li>
+         <li class="nav-item"><a href="sobreMim" data-target="sobreMim">Sobre mim</a></li>
+         <li class="nav-item"><a href="contato" data-target="contato">Contato</a></li>
+      </ul>  
+      
+
+      <div class="menu-mobile" data-menu="inativo">
+        <div class="menu-container">
+          
+          <ul class="nav-itens-mobile">
+            <li class="nav-item"><a href="projetos" data-target="projetos">Projetos</a></li>
+            <li class="nav-item"><a href="conhecimentos" data-target="conhecimentos">Conhecimentos</a></li>
+            <li class="nav-item"><a href="sobreMim" data-target="sobreMim">Sobre Mim</a></li>
+            <li class="nav-item"><a href="contato" data-target="contato">Fale Comigo</a></li>
+          </ul>
+
+          <div class="barra-gradiente-mobile"></div>
+        </div>
+        <div class="sair-menu"></div>
+      </div> 
+
+    </div>
+    <div class="barra-gradiente"></div>
+
+  </header>
+  
+  <section class="tela1 tela-inicial secao" data-blur>
+    <div class="conteudo-inicial">
+      <div class="container-boasvindas">
+
+        <div class="apresentacao">
+          <p class="ola">Olá, meu nome é</p>
+          <p class="meu-nome">Lucas Luz</p>
+          <p class="cargo">Desenvolvedor Front-End</p>
+        </div>
+        <div class="informacoes">
+          <a class="curriculo informacoes-filho" href="assets/documents/curriculo_lucas_luz.pdf" download><i class="fas fa-file-download"></i>Baixar CV</a>
+
+        </div>
+
+      </div>
+
+      <div class="container-ilustracoes">
+
+        <div class="container-svg-desenvolvedor">
+
+          <div class="paisagem">
+            <img class="paisagem-img" src="assets/image/bg15.png" alt="">
+          </div>
+
+          <div class="svg-desenvolvedor">
+            <img class="homem" src="assets/image/man with ipad.png" alt="">
+          </div>
+
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section class="projetos secao" data-height data-blur>
+
+    <h1 class="titulo-projetos titulo-secao">Projetos</h1>
+
+    <div class="conteudo-projetos">
+
+      <div class="projetos-filho">
+        <h3>Meu Portfólio</h3>
+        <div class="conteudo-projeto-filho">
+          
+          <div class="descricao-projeto">
+            Site responsivo desenvolvido para alocar meus projetos.
+          </div>
+          
+          <div class="links-projeto">
+            <a href="https://github.com/lucasfelipeluz/lucasfelipeluz.github.io" target="_blank"><i class="fab fa-github"></i> Código Fonte</a>
+          </div>
+
+          <div class="tags-projeto">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Font Awesome</span>
+          </div>
+
+
+        </div>
+      </div>
+
+      <div class="projetos-filho">
+        <h3>Controle Financeiro</h3>
+        <div class="conteudo-projeto-filho">
+          
+          <div class="descricao-projeto">
+            Aplicação de controle financeiro, que recebe receita e despesa e informa um saldo.
+            Informações ficarão salvas no armazenamento local do usuário, ou seja,
+            pode atualizar a página a vontade, que as informações não serão perdidas.
+          </div>
+          
+          <div class="links-projeto">
+            <a class="desativado"><i class="fas fa-link"></i> Website</a>
+            <a href="https://github.com/lucasfelipeluz/controle-financeiro"><i class="fab fa-github"></i> Código Fonte</a>
+          </div>
+
+          <div class="tags-projeto">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
+
+        </div>
+      </div>
+      
+      <div class="projetos-filho em-desenvolvimento">
+        
+        <div class="conteudo-projeto-filho em-desenvolvimento">
+          Em desenvolvimento...
+        </div>
+
+      </div>
+
+      <div class="projetos-filho em-desenvolvimento">
+        
+        <div class="conteudo-projeto-filho em-desenvolvimento">
+          Em desenvolvimento...
+        </div>
+
+      </div>
+
+      <div class="projetos-filho">
+        
+      </div>
+
+      <div class="projetos-filho">
+        
+      </div>
+
+
+    </div>
+  </section>
+
+  <section class="conhecimentos secao" data-height data-blur>
+
+    <h1 class="titulo-secao">Conhecimentos</h1>
+
+    <div class="conteudo-conhecimentos">
+
+      <div class="tags-conhecimentos">
+
+        <p class="instrucoes"></p>
+
+
+        <li data-tag="inativo" data-icon-html>
+          <div class="header-tag">
+            <span><i class="fab fa-html5"></i></span> HTML
+          </div>
+          <div class="conteudo-conhecimento-mobile">
+            <p class="descricao-tag">O HTML é uma linguagem de marcação. Estas linguagens são constituídas de códigos que delimitam conteúdos específicos, segundo uma sintaxe própria. O HTML tem códigos para criar paginas na web.</p>
+            <p class="experiencia-tag">2 anos de experiência</p>
+          </div>
+        </li>
+
+        <li data-tag="inativo" data-icon-css>
+          <div class="header-tag">
+            <span><i class="fab fa-css3-alt"></i></span> CSS
+          </div>
+          <div class="conteudo-conhecimento-mobile">
+            <p class="descricao-tag">O CSS nos permite criar layouts, transições e animações, mas às vezes precisamos das bibliotecas JavaScript para ajudar na modificação de algumas coisas e no controle da animação.</p>
+            <p class="experiencia-tag">2 anos de experiência</p>
+          </div>
+        </li>
+
+        <li data-tag="inativo" data-icon-js>
+          <div class="header-tag">
+            <span><i class="fab fa-js-square"></i></span> JavaScript
+          </div>
+          <div class="conteudo-conhecimento-mobile">
+            <p class="descricao-tag">JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web.</p>
+            <p class="experiencia-tag">1 ano de experiência</p>
+          </div>
+        </li>
+
+        <li data-tag="inativo" data-icon-react>
+          <div class="header-tag">
+            <span><i class="fab fa-react"></i></span> React
+          </div>
+          <div class="conteudo-conhecimento-mobile">
+            <p class="descricao-tag">O React é a biblioteca mais popular do JavaScript e é usada para construir uma interface de usuário (IU). Ela oferece uma resposta excelente para o usuário adicionar comandos usando um novo método de renderizar sites. Os componentes dessa ferramenta foram desenvolvidos pelo Facebook.</p>
+            <p class="experiencia-tag">3 meses de experiência</p>
+          </div>
+        </li>
+
+        <li data-tag="inativo" data-icon-bootstrap>
+          <div class="header-tag">
+            <span><i class="fab fa-bootstrap"></i></span> Bootstrap 4
+          </div>
+          <div class="conteudo-conhecimento-mobile">
+            <p class="descricao-tag">Bootstrap é um framework CSS utilizado em aplicações front-end, ou seja, na camada de interface com o usuário para o desenvolvimento de aplicações adaptáveis à tela de qualquer dispositivo.</p>
+            <p class="experiencia-tag">11 meses de experiência</p>
+          </div>
+        </li>
+
+        <li data-tag="inativo" data-icon-figma>
+          <div class="header-tag">
+            <span><i class="fab fa-figma"></i></span> Figma
+          </div>
+          <div class="conteudo-conhecimento-mobile">
+            <p class="descricao-tag">O Figma é uma ferramenta de design de interface na qual todo o trabalho é feito através do navegador, logo ela é compatível com Windows, Linux, Chrome e Mac. É multitarefa, ou seja, equipes multidisciplinares podem explorar o mesmo projeto juntas vendo as alterações em tempo real.</p>
+            <p class="experiencia-tag">1 mês de experiência</p>
+          </div>
+        </li>
+
+      </div>
+
+      <div class="conteudo-tags">
+
+
+      </div>
+      
+    </div>
+    
+  </section>
+
+  <section class="sobremim-contato sobreMim">
+
+
+    <section class="secao sobremim" data-height data-blur>
+      <h1 class="titulo-secao">Sobre Mim</h1>
+
+      <div class="conteudo-sobremim">
+
+        <div class="img-dev">
+          <img src="assets/image/PhotoGrid_Plus_1614175291268.png" alt="">
+        </div>
+
+        <div class="descricao-dev">
+
+          <div class="conteudo-descricao">
+            
+            <p>
+              Meu nome é Lucas Felipe Luz, sou de Recife - Pernambuco.
+              Comecei a me interessar por programação em 2019 usando o Python, e me apaixonei por
+              Desenvolvimento Front-End em 2020, e to nele até hoje.
+              Atualmente, além do Front-End, faço graduação de Análise e Desenvolvimento
+              de Sistemas, mas nem só de linguagens de programação vive o homem,
+              também estou aprendendo Inglês.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="secao contato" data-height data-blur="">
+
+      <h1 class="titulo-secao">Contato</h1>
+
+      <div class="conteudo-contato">
+
+        <div class="informacoes-contato">
+          
+          <div class="conteudo-informacoes">
+  
+            <div class="redes-sociais">
+  
+              <div class="descricao">
+                <p>Se quiser me contratar, me ajudar, ou até bater um papo sobre programação, não hesite em me chamar.</p>
+              </div>
+              <div class="conteudo-redessocias">
+                <a href="https://t.me/lucasfelipeluz" target="_blank" class="link-telegram link"><i class="fab fa-telegram-plane"></i> Telegram</a>
+                <a href="https://www.instagram.com/lucasfelipeluz/" target="_blank" class="link-instagram link"><i class="fab fa-instagram"></i>Instagram</a>
+                <a href="https://www.linkedin.com/in/lucasfelipeluz/" target="_blank" class="link-likendin link"><i class="fab fa-linkedin"></i>Linkedin</a>
+                <a href="mailto:lucasfelipeluz.dev@gmail.com" class="link-gmail link"><i class="fas fa-envelope"></i>Gmail</a>
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+  
+      </div>
+
+      </div>
+
+    </section>  
+
+  </section>
+  
+  <div class="tester">
+
+  </div>
+
+  <div class="botao-subir"></div>
+
+  <footer data-blur>
+
+    <div class="conteudo-footer">
+
+      <p>Orgulhosamente desenvolvido por Lucas Luz</p>
+
+    </div>
+
+  </footer>
+
 </body>
+
 
   <script type="module" src="assets/js/scripts.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
