@@ -1,0 +1,125 @@
+/* PÁGINA INICIAL */
+.container-ilustracoes{
+    display: none;
+}
+/* PROJETOS */
+.conteudo-projetos{
+    margin:var(--margin);
+}
+
+
+/* CONHECIMENTOS */
+.conteudo-tags{
+    display: block;
+}
+/* CONHECIMENTOS */
+.conteudo-conhecimentos{
+    margin: var(--margin);
+    display: grid;
+    grid-template-columns: 1.5fr 3fr;
+    grid-template-rows: 100%;
+    gap: 0;
+    height: 100%;
+}
+.conteudo-tags{
+    background-color: var(--conteudo);
+
+}
+.tags-conhecimentos, .conteudo-tags{
+    color: var(--cor3);
+    list-style-type: none;
+    min-height: 450px;
+}
+.tags-conhecimentos{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    gap: 20px;
+    padding: 0px 10px 0px 10px;
+    position: relative;
+}
+.tags-conhecimentos li{
+    /* border:var(--conteudo) 0.5px solid; */
+    width: 100%;
+    padding: 15px;
+    padding-left: 60px;
+    border-radius: 5px;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--conteudo);
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.tags-conhecimentos li:hover{
+    transform: translateX(-8px);
+}
+/* Cor borda hover */
+[data-icon-html]:hover{border-right: 5px solid #DD4B25;}
+[data-icon-css]:hover{border-right: 5px solid #2A95CA;}
+[data-icon-js]:hover{border-right: 5px solid #EFD81D;}
+[data-icon-react]:hover{border-right: 5px solid #05A0CA;}
+[data-icon-bootstrap]:hover{border-right: 5px solid #7511F1;}
+[data-icon-figma]:hover{border-right: 5px solid #9D56F7;}
+
+.tags-conhecimentos li span{
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 50px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    font-size: 35px;
+    color:var(--cor1);
+}
+/* Cores background dos icones */
+[data-icon-html] span{background: #DD4B25 !important;}
+[data-icon-css] span{background-color: #2A95CA !important;}
+[data-icon-js] span{background: #EFD81D!important;}
+[data-icon-react] span{background:#05A0CA !important;}
+[data-icon-bootstrap] span{background: #7511F1!important;}
+[data-icon-figma] span{background: #9D56F7!important;}
+
+/* 'Passe o mouse' */
+.instrucoes{
+    /* border: var(--bd); */
+    user-select: none;
+    position: absolute;
+    top: -30px; left: 0; right: 0;
+    z-index: 100;
+    text-align: center;
+    opacity: 0.5;
+}
+
+
+/* CONTATO e SOBREMIM */
+section.sobremim-contato{
+    /* border: var(--bd); */
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+section.sobremim{
+    /* border: var(--bd); */
+    height: 100vh;
+    margin: 0;
+}
+.conteudo-sobremim{
+    height: 550px;
+}
+
+
+section.contato{
+    /* border: var(--bd); */
+    height: 100vh;
+    margin: 0;
+}
+.conteudo-contato{
+    height: 550px;
+}
+.conteudo-redessocias{
+    grid-template-rows: 1fr 1fr 1fr 1fr !important;
+    grid-template-columns: 1fr !important;
+
+}

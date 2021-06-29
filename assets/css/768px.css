@@ -1,0 +1,63 @@
+/* PROJETOS */
+.conteudo-projetos{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+}
+.links-projeto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.links-projeto a{
+    width: 45%;
+}
+@media (max-width:820px){
+    .links-projeto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .links-projeto a{
+        width: 250px;
+    }
+}
+
+/* CONHECIMENTOS */
+
+
+/* SOBREMIM */
+@media (min-width: 790px) and (max-width: 991px){
+    section.sobremim-contato{
+        /* border: var(--bd); */
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    section.sobremim{
+        /* border: var(--bd); */
+        height: 100vh;
+        margin: 0;
+    }
+    .conteudo-sobremim{
+        height: 550px;
+    }
+
+
+    section.contato{
+        /* border: var(--bd); */
+        height: 100vh;
+        margin: 0;
+    }
+    .conteudo-contato{
+        height: 550px;
+    }
+    .conteudo-redessocias{
+        grid-template-rows: 1fr 1fr 1fr 1fr !important;
+        grid-template-columns: 1fr !important;
+
+    }
+}
