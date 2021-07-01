@@ -1,24 +1,7 @@
 /* PROJETOS */
-.conteudo-projeto-filho{
-    height: calc(100% - 51px);
-    margin: 0 20px;
-    display: grid;
-    grid-template-rows:62% 28% 10%;
-}
 .conteudo-projetos{
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    gap: 30px;
-}
-.links-projeto{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-.links-projeto a{
-    width: 250px;
 }
 
 /* CONTATO */
