@@ -116,83 +116,31 @@
 } */
 
 
-/* FALE COMIGO */
-.conteudo-contato{
+section.sobremim-contato{
     /* border: var(--bd); */
-    height: 500px !important;
-    margin: var(--margin);
-    position: relative;
-}
-.sobremim, .informacoes-contato{
-    /* border: var(--bd); */
-    color: var(--letras);
-}
-.sobremim{
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    /* border: var(--bd); */
-}
-.hover-sobremim{
-    /* border: var(--bd); */
-    height: 40px;
-    font-size: 17px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px 5px 5px 5px;
-    overflow: hidden;
-    background-color: var(--conteudo);
-    cursor: pointer;
-    transition: 0.3s;
-}
-.border-hover{
-    border-radius: 5px 5px 0px 0px;
-}
-
-.seta-direita, .seta-esquerda{
-    transition: 0.3s;
-}
-.hover-sobremim .container-seta{
-    position: absolute;
-    font-size: 20px;
-    background-color: var(--cor3);
-    transition: 0.5s;
+    padding: 0 50px 0 50px;
+    gap:20px
 
 }
-.hover-sobremim .container-seta:nth-child(1){
-    top: 0; left: 0;
-    height: 100%; width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.hover-sobremim .container-seta:nth-child(2){
-    top: 0; right: 0;
-    height: 100%; width: 10%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.conteudo-hover{
+section.contato{
     /* border: var(--bd); */
-    position: absolute;
-    top: 40px;
-    height: calc(100% - 40px);
-    background-color: var(--conteudo);
-    border-radius: 0 0 5px 5px;
-    display: flex;
-    flex-direction: column;
-    display: none;
+
+}
+section.sobremim{
+    /* border: var(--bd); */
+
 }
 
+/* SOBRE MIM */
+.conteudo-sobremim{
+    height:500px !important;
+    margin:0;
+}
 .img-dev{
-    /* border: var(--bd); */
     display: flex;
     align-items: center;
     justify-content: center;
+    /* border: var(--bd); */
 }
 .img-dev img{
     width: 180px;
@@ -208,28 +156,32 @@
     text-align: center;
 }
 
-/* Hover sobre mim */
-.hover-ativado{
-    display: block;
-    animation: conteudo-hover 0.3s;
+
+/* CONTATO */
+section.contato h1, section.sobremim h1{
+    /* border: var(--bd); */
+    padding: 0;
+    height: 42px;
+
 }
-.seta-esquerda-hover{
-    transform: rotate(90deg);
-    
+.conteudo-contato{
+    /* border: var(--bd); */
+    height: 500px !important;
+    margin: 0;
+    position: relative;
 }
-.seta-direita-hover{
-    transform: rotate(-90deg);   
+.sobremim, .informacoes-contato{
+    color: var(--letras);
 }
-@keyframes conteudo-hover{
-    from{
-        opacity: 0;
-        transform: translateY(-60px);
-    }
-    to{
-        opacity: 1;
-        transform: translateY(0);
-    }
+.sobremim{
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* border: var(--bd); */
 }
+
+
 /* Informações contato */
 .informacoes-contato{
     /* border: var(--bd); */
@@ -321,18 +273,4 @@
     width: 600px;
 }
 
-/* FOOTER */
-footer{
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(90deg, #808e9b 9%, #5a87ae 31%, #1c568a);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.conteudo-footer{
-    user-select: none;
-    color: var(--letras);
-    font-size: 21px;
-}
 

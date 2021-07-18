@@ -1,15 +1,13 @@
 import {navBar} from './navBar.js';
-import conteudoHover from './conteudoHover.js';
-import conteudoHabilidade from './conteudoHabilidades.js';
+/* import conteudoHover from './conteudoHover.js'; */
 import scrollSuave from './scrollSuave.js';
-import testeTamanhoTela from './teste.js';
+/* import testeTamanhoTela from './teste.js'; */
 
 navBar();
-conteudoHabilidade();
 scrollSuave();
-testeTamanhoTela();
+/* testeTamanhoTela(); */
 
-window.addEventListener('resize', tamanhoTela)
+/* window.addEventListener('resize', tamanhoTela) */
 
 /* 
 function tamanhoTela(){

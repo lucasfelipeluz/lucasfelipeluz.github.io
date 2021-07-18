@@ -1,4 +1,4 @@
-export default function conteudoHabilidade(){
+function conteudoHabilidadeDesktop(){
     const tagsHabilidades = document.querySelectorAll('[data-tag]');
 
     /* Accordion */
@@ -17,30 +17,39 @@ export default function conteudoHabilidade(){
 
 function accordion(index, array){
 
-    if(array[index].dataset.tag === 'ativo'){
+    if(innerWidth <= 991){
+   
+        if(array[index].dataset.tag === 'ativo'){
 
-        array[index].dataset.tag = 'inativo';
-        scrollParaATag(array[index]);
+            array[index].dataset.tag = 'inativo';
+            scrollParaATag(array[index]);
 
 
-    }else if(array[index].dataset.tag === 'inativo'){
+        }else if(array[index].dataset.tag === 'inativo'){
 
-        array.forEach(item=>{
-            item.dataset.tag = 'inativo';
-        })
+            array.forEach(item=>{
+                item.dataset.tag = 'inativo';
+            })
 
-        array[index].dataset.tag = 'ativo';
-        scrollParaATag(array[index]);
+            array[index].dataset.tag = 'ativo';
+            scrollParaATag(array[index]);
+        }
+    }else if(innerWidth >= 992){
+
+        array.forEach(item => item.dataset.tag = 'inativo')
+        
     }
 }
 
 function scrollParaATag(item){
 
-    item.scrollIntoView({
-        behavior:'smooth',
-        block:'center',
-    })
+    if(innerWidth <= 991){
 
+        item.scrollIntoView({
+            behavior:'smooth',
+            block:'center',
+        })
+    }
 }
 
 function instrucaoHabilidade(){
@@ -55,5 +64,5 @@ function instrucaoHabilidade(){
     }
 
 }
-
+conteudoHabilidadeDesktop()
 instrucaoHabilidade();

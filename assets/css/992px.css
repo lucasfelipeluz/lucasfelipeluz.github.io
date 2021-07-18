@@ -23,8 +23,19 @@
 }
 .conteudo-tags{
     background-color: var(--conteudo);
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
+.conteudo-tags .fa-tools{
+    font-size: 55px;
+}
+.conteudo-tags p{
+    text-align: center;
+}
+
 .tags-conhecimentos, .conteudo-tags{
     color: var(--cor3);
     list-style-type: none;
@@ -106,7 +117,7 @@ section.sobremim{
     margin: 0;
 }
 .conteudo-sobremim{
-    height: 550px;
+    height: 500px;
 }
 
 
@@ -116,7 +127,7 @@ section.contato{
     margin: 0;
 }
 .conteudo-contato{
-    height: 550px;
+    height: 500px;
 }
 .conteudo-redessocias{
     grid-template-rows: 1fr 1fr 1fr 1fr !important;
