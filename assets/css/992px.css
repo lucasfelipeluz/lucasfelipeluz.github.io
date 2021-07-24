@@ -21,21 +21,6 @@
     gap: 0;
     height: 100%;
 }
-.conteudo-tags{
-    background-color: var(--conteudo);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-.conteudo-tags .fa-tools{
-    font-size: 55px;
-}
-.conteudo-tags p{
-    text-align: center;
-}
-
 .tags-conhecimentos, .conteudo-tags{
     color: var(--cor3);
     list-style-type: none;
@@ -92,6 +77,36 @@
 [data-icon-bootstrap] span{background: #7511F1!important;}
 [data-icon-figma] span{background: #9D56F7!important;}
 
+.conteudo-tags{
+    border-radius: 5px;
+    background-color: var(--conteudo);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+[data-conteudo-visivel]{
+    /* border: var(--bd); */
+    margin: 20px 20px;
+    height: 130px;
+
+}
+[data-conteudo-visivel="false"]{
+    display:none;
+}
+[data-conteudo-visivel] .experiencia-tag{
+    margin: 20px 0 0 0;
+    
+}
+[data-conteudo-visivel="true"]{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
 /* 'Passe o mouse' */
 .instrucoes{
     /* border: var(--bd); */
@@ -112,22 +127,23 @@ section.sobremim-contato{
     grid-template-columns: 1fr 1fr;
 }
 section.sobremim{
-    /* border: var(--bd); */
     height: 100vh;
     margin: 0;
 }
 .conteudo-sobremim{
-    height: 500px;
+    /* border: var(--bd); */
+    height: 550px;
 }
 
 
 section.contato{
-    /* border: var(--bd); */
     height: 100vh;
     margin: 0;
 }
 .conteudo-contato{
+    /* border: var(--bd); */
     height: 500px;
+
 }
 .conteudo-redessocias{
     grid-template-rows: 1fr 1fr 1fr 1fr !important;

@@ -1,5 +1,5 @@
-function conteudoHabilidadeDesktop(){
-    const tagsHabilidades = document.querySelectorAll('[data-tag]');
+function conteudoHabilidade(){
+    const tagsHabilidades = document.querySelectorAll('li[data-tag]');
 
     /* Accordion */
     tagsHabilidades.forEach((item, index, array) => {
@@ -34,11 +34,61 @@ function accordion(index, array){
             array[index].dataset.tag = 'ativo';
             scrollParaATag(array[index]);
         }
+
     }else if(innerWidth >= 992){
 
-        array.forEach(item => item.dataset.tag = 'inativo')
+        array.forEach(item => {
+            return item.dataset.tag = 'inativo'
+        })
+
+        conteudoHabilidadeDesktop()
         
     }
+}
+
+function conteudoHabilidadeDesktop(){
+    
+    const tagsHabilidades = document.querySelectorAll('li[data-tag]');
+    const conteudoTag = document.querySelectorAll('.conteudo-tag');
+
+
+    tagsHabilidades.forEach(item => {
+        item.addEventListener('mouseenter',()=>{
+            
+            const conteudoAtivo = item.dataset.btnConteudo;
+
+            conteudoTag.forEach(item => {
+
+                if(item.dataset.conteudo === conteudoAtivo){
+                    
+                    item.dataset.conteudoVisivel = "true";
+
+                }
+                
+            })
+
+        })
+    })
+
+    tagsHabilidades.forEach(item => {
+        item.addEventListener('mouseleave',()=>{
+            
+            const conteudoAtivo = item.dataset.btnConteudo;
+
+            conteudoTag.forEach(item => {
+
+                if(item.dataset.conteudo === conteudoAtivo){
+                    
+                    item.dataset.conteudoVisivel = "false";
+
+                }
+                
+            })
+
+        })
+    
+    })
+
 }
 
 function scrollParaATag(item){
@@ -64,5 +114,6 @@ function instrucaoHabilidade(){
     }
 
 }
-conteudoHabilidadeDesktop()
+conteudoHabilidade()
 instrucaoHabilidade();
+conteudoHabilidadeDesktop();

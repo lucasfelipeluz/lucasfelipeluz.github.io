@@ -122,19 +122,21 @@ section.sobremim-contato{
     gap:20px
 
 }
-section.contato{
-    /* border: var(--bd); */
+/* section.contato{
+    border: var(--bd);
 
 }
 section.sobremim{
-    /* border: var(--bd); */
+    border: var(--bd);
 
-}
+} */
 
 /* SOBRE MIM */
 .conteudo-sobremim{
     height:500px !important;
     margin:0;
+    /* border: var(--bd);
+    padding: 0; */
 }
 .img-dev{
     display: flex;
@@ -171,6 +173,7 @@ section.contato h1, section.sobremim h1{
     position: relative;
 }
 .sobremim, .informacoes-contato{
+    /* border: var(--bd); */
     color: var(--letras);
 }
 .sobremim{
