@@ -1,0 +1,33 @@
+{
+  "name": "lucasfelipeluz.github.io",
+  "version": "0.1.0",
+  "description": "Portfólio",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode=development --watch",
+    "build": "webpack --mode=production",
+    "none": "webpack --mode=none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucasfelipeluz/lucasfelipeluz.github.io.git"
+  },
+  "author": "Lucas Luz",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.15.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0",
+    "webpack": "^5.50.0",
+    "webpack-cli": "^4.7.2",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "bugs": {
+    "url": "https://github.com/lucasfelipeluz/lucasfelipeluz.github.io/issues"
+  },
+  "homepage": "https://github.com/lucasfelipeluz/lucasfelipeluz.github.io#readme"
+}
