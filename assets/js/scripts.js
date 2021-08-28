@@ -9,8 +9,8 @@ scrollSuave();
 
 /* window.addEventListener('resize', tamanhoTela) */
 
-/* 
-function tamanhoTela(){
+
+/* function tamanhoTela(){
 
     const telaMobile = +window.innerWidth > 991 ? false : true;
     
@@ -23,11 +23,11 @@ function tamanhoTela(){
         
 
     }
-}
+} */
 
-tamanhoTela();
-testeTamanhoTela();
+/* tamanhoTela();
+testeTamanhoTela(); */
 
 
-const a = selecionarElemento('.div')
+/* const a = selecionarElemento('.div')
 console.log(a); */

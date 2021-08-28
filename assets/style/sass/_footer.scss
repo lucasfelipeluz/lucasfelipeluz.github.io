@@ -1,0 +1,22 @@
+footer{
+  margin-top: 80px;
+  display: block;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(90deg, #109c64 9%, #10b692 31%, #1c568a);
+  background-size: 800% 800%;
+  animation: animacao-footer 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.conteudo-footer{
+  user-select: none;
+  color: $letras;
+  font-size: 19px;
+}
+@keyframes animacao-footer {
+  0%{background-position:0% 47%}
+  50%{background-position:100% 54%}
+  100%{background-position:0% 47%}
+}
