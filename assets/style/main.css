@@ -91,7 +91,6 @@ header {
     grid-template-columns: 2fr 3fr;
     position: relative;
     z-index: 5;
-    margin: 0 50px 0 50px;
   }
 }
 
@@ -154,9 +153,19 @@ header {
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     font-size: 28px;
     user-select: none;
+    width: 100%;
+  }
+}
+@media (min-width: 992px) {
+  .nome-portfolio p {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 50px;
   }
 }
 
