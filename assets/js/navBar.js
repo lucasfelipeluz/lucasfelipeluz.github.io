@@ -1,30 +1,40 @@
-const navBarButton = document.querySelector('.nav-button');
-const menuMobile = document.querySelector('.menu-mobile');
-const sairDoMenu = document.querySelector('.sair-menu');
-const burgerFilho = document.querySelectorAll('.burger-button');
-const section = document.querySelectorAll('section');
-const linksInternos = document.querySelectorAll('[data-target]');
+class NavBar {
+  constructor(botaoNavBar, nav, itensNav, botaoEscape, botaoBurger) {
+    this.botaoNavBar = document.querySelector(botaoNavBar);
+    this.nav = document.querySelector(nav);
+    this.itensNav = document.querySelectorAll(itensNav);
+    this.botaoEscape = botaoEscape ? document.querySelector(botaoEscape) : null;
+    this.botaoBurger = botaoBurger ? document.querySelectorAll(botaoBurger) : null;
+  }
 
-export function navBar(){
+  mostrarNavMenu() {
+    const verificacao = this.nav.dataset.menu === 'ativo';
 
-    navBarButton.addEventListener('click', mostrarNavMenu);
-    sairDoMenu.addEventListener('click', mostrarNavMenu);
-    linksInternos.forEach(item => item.addEventListener('click', mostrarNavMenu))
-}
-
-function mostrarNavMenu(){
-
-    const verificacao = menuMobile.dataset.menu === "ativo";
-
-    if(verificacao){
-
-        menuMobile.dataset.menu = 'inativo';
-        burgerFilho.forEach(item => item.dataset.filhoBurger = 'inativo')
-
-    }else { 
-
-        menuMobile.dataset.menu = 'ativo';
-        burgerFilho.forEach(item => item.dataset.filhoBurger = 'ativo')
-        
+    if (verificacao) {
+      this.nav.dataset.menu = 'inativo';
+      this.botaoBurger.forEach((item) => {
+        item.dataset.filhoBurger = 'inativo';
+      });
+    } else {
+      this.nav.dataset.menu = 'ativo';
+      this.botaoBurger.forEach((item) => {
+        item.dataset.filhoBurger = 'ativo';
+      });
     }
+  }
+
+  iniciar() {
+    this.bindEventos();
+    this.botaoNavBar.addEventListener('click', this.mostrarNavMenu);
+    this.botaoEscape.addEventListener('click', this.mostrarNavMenu);
+    this.itensNav.forEach((item) => {
+      item.addEventListener('click', this.mostrarNavMenu);
+    });
+  }
+
+  bindEventos() {
+    this.mostrarNavMenu = this.mostrarNavMenu.bind(this);
+  }
 }
+
+export default NavBar;
