@@ -777,8 +777,10 @@ section.conhecimentos {
     transition: 0.3s;
   }
 }
-.tags-conhecimentos li:hover {
-  transform: translateX(-5px);
+@media (min-width: 992px) {
+  .tags-conhecimentos li:hover {
+    transform: translateX(-5px);
+  }
 }
 .tags-conhecimentos li span {
   height: 50px;
@@ -825,6 +827,10 @@ section.conhecimentos {
   background: #05A0CA !important;
 }
 
+[data-icon-sass] span {
+  background: #BF4080 !important;
+}
+
 [data-icon-bootstrap] span {
   background: #7511F1 !important;
 }
@@ -834,30 +840,35 @@ section.conhecimentos {
 }
 
 /* Cor borda hover */
-[data-icon-html]:hover {
-  border-right: 5px solid #DD4B25;
-}
+@media (min-width: 992px) {
+  [data-icon-html]:hover {
+    border-right: 5px solid #DD4B25;
+  }
 
-[data-icon-css]:hover {
-  border-right: 5px solid #2A95CA;
-}
+  [data-icon-css]:hover {
+    border-right: 5px solid #2A95CA;
+  }
 
-[data-icon-js]:hover {
-  border-right: 5px solid #EFD81D;
-}
+  [data-icon-js]:hover {
+    border-right: 5px solid #EFD81D;
+  }
 
-[data-icon-react]:hover {
-  border-right: 5px solid #05A0CA;
-}
+  [data-icon-react]:hover {
+    border-right: 5px solid #05A0CA;
+  }
 
-[data-icon-bootstrap]:hover {
-  border-right: 5px solid #7511F1;
-}
+  [data-icon-sass]:hover {
+    border-right: 5px solid #BF4080;
+  }
 
-[data-icon-figma]:hover {
-  border-right: 5px solid #9D56F7;
-}
+  [data-icon-bootstrap]:hover {
+    border-right: 5px solid #7511F1;
+  }
 
+  [data-icon-figma]:hover {
+    border-right: 5px solid #9D56F7;
+  }
+}
 /* Funções Mobile */
 [data-tag] .conteudo-conhecimento-mobile {
   height: 0;
@@ -1102,7 +1113,7 @@ section.contato {
 .conteudo-contato {
   height: calc(625px - 80px);
   background-color: #101518;
-  background-image: url("../image/undraw_contact_us_15o2.png");
+  background-image: url("../image/ilustracao-contato.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
