@@ -827,6 +827,10 @@ section.conhecimentos {
   background: #05A0CA !important;
 }
 
+[data-icon-sass] span {
+  background: #BF4080 !important;
+}
+
 [data-icon-bootstrap] span {
   background: #7511F1 !important;
 }
@@ -851,6 +855,10 @@ section.conhecimentos {
 
   [data-icon-react]:hover {
     border-right: 5px solid #05A0CA;
+  }
+
+  [data-icon-sass]:hover {
+    border-right: 5px solid #BF4080;
   }
 
   [data-icon-bootstrap]:hover {
