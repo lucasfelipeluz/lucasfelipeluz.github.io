@@ -42,10 +42,12 @@ class Habilidades {
 
   scrollParaTag(item) {
     if (window.innerWidth <= 991) {
-      item.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center',
-      });
+      setTimeout(() => {
+        item.scrollIntoView({
+          behavior: 'smooth',
+          block: 'center',
+        });
+      }, 500);
     }
   }
 
@@ -53,7 +55,6 @@ class Habilidades {
     if (window.innerWidth <= 991) {
       if (array[index].dataset.tag === 'ativo') {
         array[index].dataset.tag = 'inativo';
-        this.scrollParaTag(array[index]);
       } else if (array[index].dataset.tag === 'inativo') {
         array.forEach((item) => {
           item.dataset.tag = 'inativo';
