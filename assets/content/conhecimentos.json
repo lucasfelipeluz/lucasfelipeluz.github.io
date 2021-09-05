@@ -1,0 +1,38 @@
+{
+  "html":{
+    "nome":"HTML",
+    "icone": "<i class='fab fa-html5'></i>",
+    "descricao":"O HTML é uma linguagem de marcação. Estas linguagens são constituídas de códigos que delimitam conteúdos específicos, segundo uma sintaxe própria. O HTML tem códigos para criar paginas na web.",
+    "experiencia":"2 anos de experiência"
+  },
+  "css":{
+    "nome":"CSS",
+    "icone":"<i class='fab fa-css3-alt'></i>",
+    "descricao":"O CSS nos permite criar layouts, transições e animações, mas às vezes precisamos das bibliotecas JavaScript para ajudar na modificação de algumas coisas e no controle da animação.",
+    "experiencia":"2 anos de experiência"
+  },
+  "javascript":{
+    "nome":"JavaScript",
+    "icone":"<i class='fab fa-js-square'></i>",
+    "descricao":"JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web.",
+    "experiencia":"1 ano de experiência"
+  },
+  "sass":{
+    "nome":"SASS",
+    "icone":"<i class='fab fa-sass'></i>",
+    "descricao":"Sass é uma linguagem de folhas de estilo que tem a ideia de manter a mesma lógica do CSS, mas de uma maneira mais organizada, intuitiva e com trechos de código facilmente reutilizáveis.<br/> Com o SASS, é muito mais fácil desenvolver um projeto grande e não se perder no meio de tanto código.",
+    "experiencia":"2 meses de experiência"
+  },
+  "bootstrap":{
+    "nome":"Bootstrap",
+    "icone":"<i class='fab fa-bootstrap'></i>",
+    "descricao":"Bootstrap é um framework CSS utilizado em aplicações front-end, ou seja, na camada de interface com o usuário para o desenvolvimento de aplicações adaptáveis à tela de qualquer dispositivo.",
+    "experiencia":"11 meses de experiência"
+  },
+  "Figma":{
+    "nome":"Figma",
+    "icone":"<i class='fab fa-figma'></i>",
+    "descricao":"O Figma é uma ferramenta de design de interface na qual todo o trabalho é feito através do navegador, logo ela é compatível com Windows, Linux, Chrome e Mac. É multitarefa, ou seja, equipes multidisciplinares podem explorar o mesmo projeto juntas vendo as alterações em tempo real.",
+    "experiencia":"1 mês de experiência"
+  }
+}
