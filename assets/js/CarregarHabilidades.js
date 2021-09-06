@@ -17,9 +17,11 @@ class CarregarHabilidades {
 
   criandoDivDescricao(divDescricao, descricao, experiencia) {
     divDescricao.classList.add('conteudo-conhecimento-mobile');
+
     const containerdescricao = document.createElement('p');
     containerdescricao.classList.add('descricao-tag');
     containerdescricao.innerHTML = descricao;
+
     const containerExperiencia = document.createElement('p');
     containerExperiencia.classList.add('experiencia-tag');
     containerExperiencia.innerHTML = experiencia;

@@ -811,62 +811,62 @@ section.conhecimentos {
 }
 
 /* Cores background dos icones */
-[data-icon-html] span {
+[data-btn-conteudo=html] span {
   background: #DD4B25 !important;
 }
 
-[data-icon-css] span {
+[data-btn-conteudo=css] span {
   background-color: #2A95CA !important;
 }
 
-[data-icon-js] span {
+[data-btn-conteudo=javascript] span {
   background: #EFD81D !important;
 }
 
-[data-icon-react] span {
-  background: #05A0CA !important;
-}
-
-[data-icon-sass] span {
+[data-btn-conteudo=sass] span {
   background: #BF4080 !important;
 }
 
-[data-icon-bootstrap] span {
+[data-btn-conteudo=bootstrap] span {
   background: #7511F1 !important;
 }
 
-[data-icon-figma] span {
+[data-btn-conteudo=figma] span {
   background: #9D56F7 !important;
+}
+
+[data-btn-conteudo=react] span {
+  background: #05A0CA !important;
 }
 
 /* Cor borda hover */
 @media (min-width: 992px) {
-  [data-icon-html]:hover {
+  [data-btn-conteudo=html]:hover {
     border-right: 5px solid #DD4B25;
   }
 
-  [data-icon-css]:hover {
+  [data-btn-conteudo=css]:hover {
     border-right: 5px solid #2A95CA;
   }
 
-  [data-icon-js]:hover {
+  [data-btn-conteudo=javascript]:hover {
     border-right: 5px solid #EFD81D;
   }
 
-  [data-icon-react]:hover {
-    border-right: 5px solid #05A0CA;
-  }
-
-  [data-icon-sass]:hover {
+  [data-btn-conteudo=sass]:hover {
     border-right: 5px solid #BF4080;
   }
 
-  [data-icon-bootstrap]:hover {
+  [data-btn-conteudo=bootstrap]:hover {
     border-right: 5px solid #7511F1;
   }
 
-  [data-icon-figma]:hover {
+  [data-btn-conteudo=figma]:hover {
     border-right: 5px solid #9D56F7;
+  }
+
+  [data-btn-conteudo=react]:hover {
+    border-right: 5px solid #05A0CA;
   }
 }
 /* Funções Mobile */
