@@ -1,17 +1,23 @@
+import Habilidades from './habilidades';
+
 class CarregarHabilidades {
   adicionandoDataSet(conteudo, btnConteudo) {
     conteudo.dataset.tag = 'inativo';
     conteudo.dataset.btnConteudo = `${btnConteudo}`;
+
     return conteudo;
   }
 
   criandoHeaderTag(headerTag, icone, name) {
     headerTag.classList.add('header-tag');
+
     const span = document.createElement('span');
     span.classList.add('icon-tag');
     span.innerHTML = icone;
+
     headerTag.appendChild(span);
     headerTag.append(name);
+
     return headerTag;
   }
 
@@ -52,8 +58,12 @@ class CarregarHabilidades {
 
   async iniciar() {
     const arquivo = await fetch('../assets/content/conhecimentos.json');
-    const novoArquivo = Object.entries(await arquivo.json());
-    novoArquivo.forEach((item) => { this.criandoHTML(item); });
+    const arquivoJson = Object.entries(await arquivo.json());
+
+    arquivoJson.forEach((item) => { this.criandoHTML(item); });
+
+    const habilidades = new Habilidades('li[data-btn-conteudo]', '.conteudo-tag');
+    habilidades.iniciar();
   }
 }
 

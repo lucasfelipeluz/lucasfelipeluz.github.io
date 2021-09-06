@@ -29,7 +29,7 @@
     "descricao":"Bootstrap é um framework CSS utilizado em aplicações front-end, ou seja, na camada de interface com o usuário para o desenvolvimento de aplicações adaptáveis à tela de qualquer dispositivo.",
     "experiencia":"11 meses de experiência"
   },
-  "Figma":{
+  "figma":{
     "nome":"Figma",
     "icone":"<i class='fab fa-figma'></i>",
     "descricao":"O Figma é uma ferramenta de design de interface na qual todo o trabalho é feito através do navegador, logo ela é compatível com Windows, Linux, Chrome e Mac. É multitarefa, ou seja, equipes multidisciplinares podem explorar o mesmo projeto juntas vendo as alterações em tempo real.",
