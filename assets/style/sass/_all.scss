@@ -64,7 +64,7 @@ section.tela-inicial{
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: animacao-letra 25s ease infinite;
+  /* animation: animacao-letra 25s ease infinite; */
   text-align: center;
 
   /* Animacao apresentacao */
@@ -129,7 +129,7 @@ section.tela-inicial{
   .informacoes-filho{
     background: linear-gradient(95deg, #f0e6e6, #ffe0e0, #808e9b, #5a87ae, #0be881, #ff3f34,#ff3f34);
     background-size: 800% 800%;
-    animation: animacao-letra 25s ease infinite;
+    /* animation: animacao-letra 25s ease infinite; */
     font-size: 17px;
     border-radius: 5px;
     display: flex;
@@ -207,6 +207,7 @@ section.projetos{
   grid-template-rows: 1fr 1fr;
   gap: 30px;
 
+
   @include mobile(){
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -259,6 +260,7 @@ section.projetos{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
   }
 
   .tags-projeto span{
@@ -273,6 +275,7 @@ section.projetos{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    margin-bottom: 15px;
 
     a{
       font-weight: 600;
