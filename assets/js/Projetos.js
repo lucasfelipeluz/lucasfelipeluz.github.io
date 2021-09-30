@@ -1,6 +1,6 @@
 class Projetos {
-  constructor(divProjeto) {
-    this.divProjeto = document.querySelector(divProjeto);
+  constructor(containerPrincipal) {
+    this.containerPrincipal = document.querySelector(containerPrincipal);
   }
 
   async fetchProjetos() {
@@ -23,11 +23,10 @@ class Projetos {
 
   criandoElementos(item) {
     const projeto = item[1];
-    const containerPrincipal = document.querySelector('.conteudo-projetos');
 
     const container = document.createElement('div');
     this.adicionandoClasses(container, projeto.classeTitulo);
-    this.adicionarProjetoAoDOM(containerPrincipal, container);
+    this.adicionarProjetoAoDOM(this.containerPrincipal, container);
 
     const titulo = document.createElement('h3');
     this.adicionandoConteudoATag(titulo, projeto.titulo);
@@ -89,5 +88,5 @@ class Projetos {
     this.fetchProjetos();
   }
 }
-const teste = new Projetos('.conteudo-projetos');
-teste.iniciar();
+
+export default Projetos;
