@@ -21,30 +21,24 @@ class Projetos {
     container.appendChild(projeto);
   }
 
-  criandoBotaoWebSite(projeto, linksProjetos) {
-    const linkWebSite = document.createElement('a');
-    linkWebSite.href = projeto.url;
-    this.adicionandoConteudoATag(linkWebSite, projeto.conteudoUrl);
-    const iconeWebsite = document.createElement('i');
-    const classeIconeWebsite = Object.values(projeto.iconeUrl);
-    classeIconeWebsite.forEach((item) => {
-      this.adicionandoClasses(iconeWebsite, item);
-    });
-    this.adicionarProjetoAoDOM(linkWebSite, iconeWebsite);
-    this.adicionarProjetoAoDOM(linksProjetos, linkWebSite);
-  }
+  criandoBotoes(projeto, linksProjetos) {
+    const botoes = Object.values(projeto.botoes);
 
-  criandoBotaoCodigo(projeto, linksProjetos) {
-    const linkCodigo = document.createElement('a');
-    linkCodigo.href = projeto.codigo;
-    this.adicionandoConteudoATag(linkCodigo, projeto.conteudoCodigo);
-    const iconeCodigo = document.createElement('i');
-    const classeIconeCodigo = Object.values(projeto.iconeCodigo);
-    classeIconeCodigo.forEach((item) => {
-      this.adicionandoClasses(iconeCodigo, item);
+    botoes.forEach(botao => {
+      const divBotao = document.createElement('a');
+      divBotao.href = botao.url;
+
+      const icones = Object.values(botao.icone);
+      const divIcone = document.createElement('i');
+      icones.forEach(icone => {
+        this.adicionandoClasses(divIcone, icone);
+      });
+
+      this.adicionarProjetoAoDOM(divBotao, divIcone);
+      divBotao.append(botao.conteudo);
+
+      linksProjetos.append(divBotao);
     });
-    this.adicionarProjetoAoDOM(linkCodigo, iconeCodigo);
-    this.adicionarProjetoAoDOM(linksProjetos, linkCodigo);
   }
 
   criandoTags(projeto, conteudoContainer) {
@@ -83,10 +77,14 @@ class Projetos {
     this.adicionandoClasses(linksProjetos, projeto.classeLinks);
     this.adicionarProjetoAoDOM(conteudoContainer, linksProjetos);
 
-    this.criandoBotaoWebSite(projeto, linksProjetos);
-    this.criandoBotaoCodigo(projeto, linksProjetos);
+    this.criandoBotoes(projeto, linksProjetos);
 
     this.criandoTags(projeto, conteudoContainer);
+
+    /* this.criandoBotaoWebSite(projeto, linksProjetos);
+    this.criandoBotaoCodigo(projeto, linksProjetos);
+
+    this.criandoTags(projeto, conteudoContainer); */
   }
 
   criandoContainerProjeto(projeto) {
