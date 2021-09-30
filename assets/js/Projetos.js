@@ -3,12 +3,6 @@ class Projetos {
     this.containerPrincipal = document.querySelector(containerPrincipal);
   }
 
-  async fetchProjetos() {
-    const arquivo = await (await fetch('../assets/content/projetos.json'));
-    const arquivoJson = Object.entries(await arquivo.json());
-    this.criandoContainerProjeto(arquivoJson);
-  }
-
   adicionandoConteudoATag(elemento, conteudo) {
     elemento.innerText = conteudo;
   }
@@ -78,13 +72,13 @@ class Projetos {
     this.adicionarProjetoAoDOM(conteudoContainer, linksProjetos);
 
     this.criandoBotoes(projeto, linksProjetos);
-
     this.criandoTags(projeto, conteudoContainer);
+  }
 
-    /* this.criandoBotaoWebSite(projeto, linksProjetos);
-    this.criandoBotaoCodigo(projeto, linksProjetos);
-
-    this.criandoTags(projeto, conteudoContainer); */
+  async fetchProjetos() {
+    const arquivo = await (await fetch('../assets/content/projetos.json'));
+    const arquivoJson = Object.entries(await arquivo.json());
+    this.criandoContainerProjeto(arquivoJson);
   }
 
   criandoContainerProjeto(projeto) {
