@@ -24,18 +24,6 @@
       }
     },
     "classeLinks":"links-projeto",
-    "url":"project/controle-financeiro/index.html",
-    "iconeUrl":{
-      "0":"fas",
-      "1":"fa-link"
-    },
-    "conteudoUrl":" WebSite",
-    "codigo":"https://github.com/lucasfelipeluz/controle-financeiro",
-    "iconeCodigo":{
-      "0":"fab",
-      "1":"fa-github"
-    },
-    "conteudoCodigo":" Código",
     "classeTags":"tags-projeto",
     "tecnologias":{
       "1":"HTML",
