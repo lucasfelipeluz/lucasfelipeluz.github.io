@@ -21,6 +21,44 @@ class Projetos {
     container.appendChild(projeto);
   }
 
+  criandoBotaoWebSite(projeto, linksProjetos) {
+    const linkWebSite = document.createElement('a');
+    linkWebSite.href = projeto.url;
+    this.adicionandoConteudoATag(linkWebSite, projeto.conteudoUrl);
+    const iconeWebsite = document.createElement('i');
+    const classeIconeWebsite = Object.values(projeto.iconeUrl);
+    classeIconeWebsite.forEach((item) => {
+      this.adicionandoClasses(iconeWebsite, item);
+    });
+    this.adicionarProjetoAoDOM(linkWebSite, iconeWebsite);
+    this.adicionarProjetoAoDOM(linksProjetos, linkWebSite);
+  }
+
+  criandoBotaoCodigo(projeto, linksProjetos) {
+    const linkCodigo = document.createElement('a');
+    linkCodigo.href = projeto.codigo;
+    this.adicionandoConteudoATag(linkCodigo, projeto.conteudoCodigo);
+    const iconeCodigo = document.createElement('i');
+    const classeIconeCodigo = Object.values(projeto.iconeCodigo);
+    classeIconeCodigo.forEach((item) => {
+      this.adicionandoClasses(iconeCodigo, item);
+    });
+    this.adicionarProjetoAoDOM(linkCodigo, iconeCodigo);
+    this.adicionarProjetoAoDOM(linksProjetos, linkCodigo);
+  }
+
+  criandoTags(projeto, conteudoContainer) {
+    const tagsProjetos = document.createElement('div');
+    this.adicionandoClasses(tagsProjetos, projeto.classeTags);
+    const tags = Object.values(projeto.tecnologias);
+    tags.forEach((item) => {
+      const containerTag = document.createElement('span');
+      this.adicionandoConteudoATag(containerTag, item);
+      this.adicionarProjetoAoDOM(tagsProjetos, containerTag);
+    });
+    this.adicionarProjetoAoDOM(conteudoContainer, tagsProjetos);
+  }
+
   criandoElementos(item) {
     const projeto = item[1];
 
@@ -45,37 +83,10 @@ class Projetos {
     this.adicionandoClasses(linksProjetos, projeto.classeLinks);
     this.adicionarProjetoAoDOM(conteudoContainer, linksProjetos);
 
-    const linkWebSite = document.createElement('a');
-    linkWebSite.href = projeto.url;
-    this.adicionandoConteudoATag(linkWebSite, projeto.conteudoUrl);
-    const iconeWebsite = document.createElement('i');
-    const classeIconeWebsite = Object.values(projeto.iconeUrl);
-    classeIconeWebsite.forEach((item) => {
-      this.adicionandoClasses(iconeWebsite, item);
-    });
-    this.adicionarProjetoAoDOM(linkWebSite, iconeWebsite);
-    this.adicionarProjetoAoDOM(linksProjetos, linkWebSite);
+    this.criandoBotaoWebSite(projeto, linksProjetos);
+    this.criandoBotaoCodigo(projeto, linksProjetos);
 
-    const linkCodigo = document.createElement('a');
-    linkCodigo.href = projeto.codigo;
-    this.adicionandoConteudoATag(linkCodigo, projeto.conteudoCodigo);
-    const iconeCodigo = document.createElement('i');
-    const classeIconeCodigo = Object.values(projeto.iconeCodigo);
-    classeIconeCodigo.forEach((item) => {
-      this.adicionandoClasses(iconeCodigo, item);
-    });
-    this.adicionarProjetoAoDOM(linkCodigo, iconeCodigo);
-    this.adicionarProjetoAoDOM(linksProjetos, linkCodigo);
-
-    const tagsProjetos = document.createElement('div');
-    this.adicionandoClasses(tagsProjetos, projeto.classeTags);
-    const tags = Object.values(projeto.tecnologias);
-    tags.forEach((item) => {
-      const containerTag = document.createElement('span');
-      this.adicionandoConteudoATag(containerTag, item);
-      this.adicionarProjetoAoDOM(tagsProjetos, containerTag);
-    });
-    this.adicionarProjetoAoDOM(conteudoContainer, tagsProjetos);
+    this.criandoTags(projeto, conteudoContainer);
   }
 
   criandoContainerProjeto(projeto) {
