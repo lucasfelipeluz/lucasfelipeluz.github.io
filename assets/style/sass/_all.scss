@@ -457,7 +457,12 @@ section.conhecimentos{
 }
 [data-tag] .conteudo-conhecimento-mobile p{display: none;}
 
-.tags-conhecimentos li[data-tag = "ativo"]{height: 300px;}
+.tags-conhecimentos li[data-tag = "ativo"]{
+  height: 300px;
+  @include desktop(){
+    height: 50px;
+  }
+}
 
 
 [data-tag = "ativo"] .conteudo-conhecimento-mobile p{

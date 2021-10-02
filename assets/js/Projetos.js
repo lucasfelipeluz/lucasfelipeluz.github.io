@@ -3,12 +3,6 @@ class Projetos {
     this.containerPrincipal = document.querySelector(containerPrincipal);
   }
 
-  async fetchProjetos() {
-    const arquivo = await (await fetch('../assets/content/projetos.json'));
-    const arquivoJson = Object.entries(await arquivo.json());
-    this.criandoContainerProjeto(arquivoJson);
-  }
-
   adicionandoConteudoATag(elemento, conteudo) {
     elemento.innerText = conteudo;
   }
@@ -19,6 +13,38 @@ class Projetos {
 
   adicionarProjetoAoDOM(container, projeto) {
     container.appendChild(projeto);
+  }
+
+  criandoBotoes(projeto, linksProjetos) {
+    const botoes = Object.values(projeto.botoes);
+
+    botoes.forEach(botao => {
+      const divBotao = document.createElement('a');
+      divBotao.href = botao.url;
+
+      const icones = Object.values(botao.icone);
+      const divIcone = document.createElement('i');
+      icones.forEach(icone => {
+        this.adicionandoClasses(divIcone, icone);
+      });
+
+      this.adicionarProjetoAoDOM(divBotao, divIcone);
+      divBotao.append(botao.conteudo);
+
+      linksProjetos.append(divBotao);
+    });
+  }
+
+  criandoTags(projeto, conteudoContainer) {
+    const tagsProjetos = document.createElement('div');
+    this.adicionandoClasses(tagsProjetos, projeto.classeTags);
+    const tags = Object.values(projeto.tecnologias);
+    tags.forEach((item) => {
+      const containerTag = document.createElement('span');
+      this.adicionandoConteudoATag(containerTag, item);
+      this.adicionarProjetoAoDOM(tagsProjetos, containerTag);
+    });
+    this.adicionarProjetoAoDOM(conteudoContainer, tagsProjetos);
   }
 
   criandoElementos(item) {
@@ -45,37 +71,14 @@ class Projetos {
     this.adicionandoClasses(linksProjetos, projeto.classeLinks);
     this.adicionarProjetoAoDOM(conteudoContainer, linksProjetos);
 
-    const linkWebSite = document.createElement('a');
-    linkWebSite.href = projeto.url;
-    this.adicionandoConteudoATag(linkWebSite, projeto.conteudoUrl);
-    const iconeWebsite = document.createElement('i');
-    const classeIconeWebsite = Object.values(projeto.iconeUrl);
-    classeIconeWebsite.forEach((item) => {
-      this.adicionandoClasses(iconeWebsite, item);
-    });
-    this.adicionarProjetoAoDOM(linkWebSite, iconeWebsite);
-    this.adicionarProjetoAoDOM(linksProjetos, linkWebSite);
+    this.criandoBotoes(projeto, linksProjetos);
+    this.criandoTags(projeto, conteudoContainer);
+  }
 
-    const linkCodigo = document.createElement('a');
-    linkCodigo.href = projeto.codigo;
-    this.adicionandoConteudoATag(linkCodigo, projeto.conteudoCodigo);
-    const iconeCodigo = document.createElement('i');
-    const classeIconeCodigo = Object.values(projeto.iconeCodigo);
-    classeIconeCodigo.forEach((item) => {
-      this.adicionandoClasses(iconeCodigo, item);
-    });
-    this.adicionarProjetoAoDOM(linkCodigo, iconeCodigo);
-    this.adicionarProjetoAoDOM(linksProjetos, linkCodigo);
-
-    const tagsProjetos = document.createElement('div');
-    this.adicionandoClasses(tagsProjetos, projeto.classeTags);
-    const tags = Object.values(projeto.tecnologias);
-    tags.forEach((item) => {
-      const containerTag = document.createElement('span');
-      this.adicionandoConteudoATag(containerTag, item);
-      this.adicionarProjetoAoDOM(tagsProjetos, containerTag);
-    });
-    this.adicionarProjetoAoDOM(conteudoContainer, tagsProjetos);
+  async fetchProjetos() {
+    const arquivo = await (await fetch('../assets/content/projetos.json'));
+    const arquivoJson = Object.entries(await arquivo.json());
+    this.criandoContainerProjeto(arquivoJson);
   }
 
   criandoContainerProjeto(projeto) {
