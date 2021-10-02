@@ -64,7 +64,7 @@ section.tela-inicial{
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  /* animation: animacao-letra 25s ease infinite; */
+  animation: animacao-letra 25s ease infinite;
   text-align: center;
 
   /* Animacao apresentacao */
@@ -129,7 +129,7 @@ section.tela-inicial{
   .informacoes-filho{
     background: linear-gradient(95deg, #f0e6e6, #ffe0e0, #808e9b, #5a87ae, #0be881, #ff3f34,#ff3f34);
     background-size: 800% 800%;
-    /* animation: animacao-letra 25s ease infinite; */
+    animation: animacao-letra 25s ease infinite;
     font-size: 17px;
     border-radius: 5px;
     display: flex;
@@ -457,7 +457,12 @@ section.conhecimentos{
 }
 [data-tag] .conteudo-conhecimento-mobile p{display: none;}
 
-.tags-conhecimentos li[data-tag = "ativo"]{height: 300px;}
+.tags-conhecimentos li[data-tag = "ativo"]{
+  height: 300px;
+  @include desktop(){
+    height: 50px;
+  }
+}
 
 
 [data-tag = "ativo"] .conteudo-conhecimento-mobile p{
