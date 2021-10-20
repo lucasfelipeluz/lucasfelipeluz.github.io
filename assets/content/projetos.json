@@ -30,5 +30,38 @@
       "2":"CSS",
       "3":"JavaScript"
     }
+  },
+  "scrolling-infinito":{
+    "titulo":"Scrolling Infinito",
+    "classeTitulo":"projetos-filho",
+    "classeConteudo":"conteudo-projeto-filho",
+    "descricao":"Scroll infinito com carregamento mais ferramenta de busca. Assim que chegar ao final da página mais posts serão mostrados.",
+    "classeDescricao":"descricao-projeto",
+    "botoes":{
+      "website":{
+        "conteudo":"WebSite",
+        "url":"project/scrolling-e-filtragem/index.html",
+        "icone":{
+          "0":"fas",
+          "1":"fa-link"
+        }
+      },
+      "codigo":{
+        "conteudo":"Código",
+        "url":"https://github.com/lucasfelipeluz/filtragem-de-posts-e-scrolling-infinito",
+        "icone":{
+          "0":"fab",
+          "1":"fa-github"
+        }
+      }
+    },
+    "classeLinks":"links-projeto",
+    "classeTags":"tags-projeto",
+    "tecnologias":{
+      "1":"HTML",
+      "2":"CSS",
+      "3":"JavaScript",
+      "4":"Fetch API"
+    }
   }
 }

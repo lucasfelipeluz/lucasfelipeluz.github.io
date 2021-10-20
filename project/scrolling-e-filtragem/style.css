@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0; padding: 0;
+}
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+}
+
+body{
+  background-color: #1e272e;
+  color: #f1f2f6;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding-bottom: 50px;
+}
+main{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-conteudo{
+  flex-grow: 2;
+}
+.container-conteudo h1{
+  font-size: 65px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container-filtro{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container-filtro input{
+  border-radius: 5px;
+  width: 80%;
+  height: 35px;
+  border: none;
+  padding-left: 10px;
+}
+.container-filtro input::placeholder{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.container-posts{
+  margin: 50px 10px 0 10px;
+  display: grid;
+  grid-template-rows: 1fr;
+  gap: 15px;
+  padding-bottom: 50px;
+}
+.post{
+  background-color: #101518;
+  margin: 0 10px;
+  padding: 10px 20px;
+  position: relative;
+  border-radius: 10px;
+}
+.post .numero{
+  position: absolute;
+  left: -10px;
+  background-color: greenyellow;
+  color: #1e272e;
+  padding: 5px;
+  border-radius: 5px;
+}
+.post .post-info .post-titulo{
+  margin-bottom: 15px;
+}
+.post .post-info .post-corpo{
+  color: #b9babd;
+}
+
+
+.carregamento {
+  opacity: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  transition: opacity 0.3s ease-in;
+}
+
+.carregamento.ativo {
+  opacity: 1;
+}
+
+.circulo {
+  background-color: #d2dae2;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  animation: bounce 0.5s ease-in infinite;
+}
+
+.circulo:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+
+.circulo:nth-of-type(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (min-width:900px) {
+  .container-posts{
+    margin: 50px 50px 0 50px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+  }
+}
+@media (min-width:1200px) {
+  .container-posts{
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+}
