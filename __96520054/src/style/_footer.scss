@@ -1,0 +1,55 @@
+footer{
+  height: 200px;
+  margin-top: 60px;
+  background-color: $cor2;
+  position: relative;
+
+  .conteudo-logo{
+    padding-top: 10px;
+    /* border: $bd; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 45px;
+      margin-bottom: 15px;
+    }
+  }
+
+  .informacoes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    li{
+      list-style-type: none;
+      margin-bottom: 5px;
+      
+      a{
+        font-family: $font1;
+        text-decoration: none;
+        color: $cor1;
+        font-size: 14px;
+        
+        &:hover{
+          color:#d6d9da;
+        }
+      }
+    }
+  }
+  .creditos{
+    width: 100%;
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+      
+      text-decoration: none;
+      font-size: 12px;
+      font-family: $font1;
+      color: $cor1;
+    }
+  }
+}
