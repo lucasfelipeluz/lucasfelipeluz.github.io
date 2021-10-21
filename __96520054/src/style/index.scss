@@ -1,0 +1,111 @@
+$cor1: #ecf0f1;
+$cor2: #34495E;
+$cor3:#2ecc71;
+
+$true:#2ecc71;
+$true-hover: #27b863;
+$false:#e74c3c;
+
+$corFonte1:#222f3e;  
+$corFonte2:#576574;
+
+/* Fontes */
+$font1:'IBM Plex Sans', sans-serif;
+
+/* Testes */
+$bd: 1px solid white;
+$bb: 1px solid black;
+
+/* Margin padrão */
+$marginm: 0 10px 0 10px;
+$margind: 0 50px 0 50px;
+
+
+
+/* Mixins */
+@mixin mobile(){
+  @media(min-width: 680px){
+    @content;
+  }
+}
+@mixin tablet(){
+  @media(min-width: 768px){
+    @content;
+  }
+}
+@mixin sobreMim(){
+  @media(min-width:790px) and (max-width:991px){
+    @content;
+  }
+}
+@mixin onlyMobile(){
+  @media(max-width: 991px){
+    @content;
+  }
+}
+@mixin desktop(){
+  @media(min-width: 992px){
+    @content;
+  }
+}
+@mixin mediumdesktop(){
+  @media(min-width: 1200px){
+    @content;
+  }
+}
+@mixin bigdesktop(){
+  @media(min-width: 1400px){
+    @content;
+  }
+}
+
+
+
+/* SCROOL BAR */
+::-webkit-scrollbar-track {
+  background-color:$cor1;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: $cor3;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0; margin: 0;
+  font-family: $font1;
+}
+
+h1, h2,h3,h4,h5,h6{
+  font-family: $font1;
+}
+p{
+  font-family: $font1;
+}
+
+textarea, input, select, button {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
+
+textarea:focus, input:focus, select:focus, button:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  outline: 0;
+} 
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
+
+@import 'header';
+@import 'all';
+@import 'footer';
