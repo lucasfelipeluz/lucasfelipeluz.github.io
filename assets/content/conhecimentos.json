@@ -21,18 +21,18 @@
     "nome":"SASS",
     "icone":"<i class='fab fa-sass'></i>",
     "descricao":"Sass é uma linguagem de folhas de estilo que tem a ideia de manter a mesma lógica do CSS, mas de uma maneira mais organizada, intuitiva e com trechos de código facilmente reutilizáveis.<br/> Com o SASS, é muito mais fácil desenvolver um projeto grande e não se perder no meio de tanto código.",
-    "experiencia":"2 meses de experiência"
+    "experiencia":"6 meses de experiência"
   },
   "bootstrap":{
     "nome":"Bootstrap",
     "icone":"<i class='fab fa-bootstrap'></i>",
     "descricao":"Bootstrap é um framework CSS utilizado em aplicações front-end, ou seja, na camada de interface com o usuário para o desenvolvimento de aplicações adaptáveis à tela de qualquer dispositivo.",
-    "experiencia":"11 meses de experiência"
+    "experiencia":"1 ano de experiência"
   },
   "figma":{
     "nome":"Figma",
     "icone":"<i class='fab fa-figma'></i>",
     "descricao":"O Figma é uma ferramenta de design de interface na qual todo o trabalho é feito através do navegador, logo ela é compatível com Windows, Linux, Chrome e Mac. É multitarefa, ou seja, equipes multidisciplinares podem explorar o mesmo projeto juntas vendo as alterações em tempo real.",
-    "experiencia":"1 mês de experiência"
+    "experiencia":"4 meses de experiência"
   }
 }
