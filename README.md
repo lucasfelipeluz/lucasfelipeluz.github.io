@@ -37,7 +37,7 @@ Para o desenvolvimento deste site utilizei as seguintes tecnologias:
   <tr>
     <td align="center">
       <a href="https://github.com/lucasfelipeluz">
-        <img src="https://avatars.githubusercontent.com/lucasfelipeluz" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://avatars.githubusercontent.com/lucasfelipeluz" width="100px;" alt="Foto de perfil de Lucas Luz no GitHub"/><br>
         <sub>
           <b>Lucas Luz</b>
         </sub>
