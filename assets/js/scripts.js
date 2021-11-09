@@ -10,8 +10,17 @@ navBarClass.iniciar();
 const navBarScroll = new ScrollNavBar('[data-target]');
 navBarScroll.iniciar();
 
-const conhecimentos = new Conhecimentos('li[data-btn-conteudo]', '.conteudo-tag');
-conhecimentos.iniciar();
-
 const carregarProjetos = new Projetos('.conteudo-projetos');
 carregarProjetos.iniciar();
+
+async function iniciarConhecimentos() {
+  const arquivo = await fetch('../assets/content/conhecimentos.json');
+  const conhecimentos = Object.entries(await arquivo.json());
+
+  conhecimentos.forEach(conhecimento => {
+    Conhecimentos.criarEAdicionarDivConhecimento(conhecimento[1]);
+  });
+  Conhecimentos.accordionEHover();
+}
+
+iniciarConhecimentos();

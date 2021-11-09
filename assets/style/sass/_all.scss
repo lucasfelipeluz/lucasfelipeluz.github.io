@@ -6,14 +6,7 @@
   }
 }
 
-/* SECTIONS */
-.secao, section{
- /*  @include mediumdesktop(){
-    margin-bottom: 100px;
-    padding-bottom: 50px;
-    
-  } */
-}
+/* Pré sets */
 [data-height]{
   @include mediumdesktop(){
     min-height: 100vh !important;
