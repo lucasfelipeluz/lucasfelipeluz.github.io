@@ -1,11 +1,12 @@
-/* SECTIONS */
-.secao, section{
+/* Funções */
+@mixin espacamentoSection(){
   @include mediumdesktop(){
-    margin-bottom: 100px;
-    padding-bottom: 50px;
-    
+    margin-bottom: 100px !important;
+    padding-bottom: 50px !important;
   }
 }
+
+/* Pré sets */
 [data-height]{
   @include mediumdesktop(){
     min-height: 100vh !important;
@@ -28,6 +29,8 @@
 section.tela-inicial{
   display: block;
   height: calc(100vh - 60px);
+
+  @include espacamentoSection();
 
   @include mediumdesktop(){
     margin: $margin;
@@ -59,13 +62,15 @@ section.tela-inicial{
   position: relative;
   line-height: 35px;
   user-select: none;
-  background: linear-gradient(95deg, #f0e6e6, #ffe0e0, #808e9b, #5a87ae, #0be881, #ff3f34, #ff3f34);
-  background-size: 800% 800%;
+  /* background: linear-gradient(95deg, #f0e6e6, #ffe0e0, #808e9b, #5a87ae, #0be881, #ff3f34, #ff3f34);
+  background-size: 800% 800%; */
+  /* animation: animacao-letra 25s ease infinite; */
+  background-color: $cordestaque;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: animacao-letra 25s ease infinite;
   text-align: center;
+  
 
   /* Animacao apresentacao */
   @keyframes animacao-letra {
@@ -119,6 +124,8 @@ section.tela-inicial{
   grid-template-columns: 1fr;
   gap: 20px;
   margin-top: 30px;
+  position: relative;
+  
 
   @include mediumdesktop(){
     width: 100%;
@@ -126,10 +133,24 @@ section.tela-inicial{
     margin-top: 25px;
   }
 
+  p.informacoes-vaga{
+    width: 100%;
+    color: $cor3;
+    text-align: center;
+    position: absolute;
+    bottom: -50%;
+    font-size: 13px;
+
+    @include mediumdesktop(){
+      text-align: start;
+    }
+  }
+
   .informacoes-filho{
-    background: linear-gradient(95deg, #f0e6e6, #ffe0e0, #808e9b, #5a87ae, #0be881, #ff3f34,#ff3f34);
+    /* background: linear-gradient(95deg, #f0e6e6, #ffe0e0, #808e9b, #5a87ae, #0be881, #ff3f34,#ff3f34);
     background-size: 800% 800%;
-    animation: animacao-letra 25s ease infinite;
+    animation: animacao-letra 25s ease infinite; */
+    background-color: $cordestaque;
     font-size: 17px;
     border-radius: 5px;
     display: flex;
@@ -138,6 +159,7 @@ section.tela-inicial{
     text-decoration: none;
     color: $cor1;
     font-weight: 800;
+    
 
     @include mediumdesktop(){
       width: 280px;
@@ -172,6 +194,12 @@ section.tela-inicial{
     height: 470px;
   }
 
+  .paisagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .paisagem, .svg-desenvolvedor{
     position: absolute;
     width: 100%;
@@ -190,6 +218,8 @@ section.projetos{
   display: block;
   min-height: 100vh;
   margin-top: 50px;
+
+  @include espacamentoSection();
 }
 .titulo-secao{
   height: 8%;
@@ -314,7 +344,7 @@ section.conhecimentos{
   min-height: 100vh;
   margin-top: 50px;
 
-
+  @include espacamentoSection();
 }
 .conteudo-conhecimentos{
   margin:0 10px 0 10px;
@@ -521,7 +551,6 @@ section.conhecimentos{
 }
 
 [data-conteudo-visivel]{
-  /* border: var(--bd); */
   margin: 20px 20px;
   height: 130px;
 
@@ -540,110 +569,70 @@ section.conhecimentos{
   align-items: stretch;
 }
 
-
-/* SOBRE MIM  E CONTATO */
-section.sobremim-contato{
-  @include sobreMim(){
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+/* SOBREMIM e CONTATO */
+.sobremim-contato{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr;
+  
   @include desktop(){
-    height: 100vh;
-    display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: $margin;
   }
+
   @include mediumdesktop(){
-    padding: 0 50px 0 50px;
-    gap:20px
+    grid-template-rows: 1fr !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px;
   }
 }
-/* SOBRE MIM */
-section.sobremim{
-  height: 80vh;
-  margin-top: 50px;
-  color: $letras;
 
-  @include sobreMim(){
-    height: 100vh;
-    margin: 0;
-  }
-  @include desktop(){
-    height: 100vh;
-    margin: 0;
-  }
+.sobremim{
+  height: 630px;
+  margin-bottom: 50px;
 
-  @include mediumdesktop(){
-    height: 100%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
+  .conteudo-sobremim{
+    height: 550px;
+    background-color: $conteudo;
+    margin:0 10px;
+    border-radius: 5px;
+    text-align: center;
 
-  h1{
-    @include mediumdesktop(){
-      padding: 0;
-      height: 42px;   
+    @include desktop(){
+      margin: 0;
     }
-  }
-}
-.conteudo-sobremim{
-  background-color: $conteudo;
-  margin:0 10px;
-  border-radius: 5px;
-  text-align: center;
+    
 
-  @include sobreMim(){
-    height: 550px;
-  }
-
-  @include desktop(){
-    height: 550px;
-  }
-
-  @include mediumdesktop(){
-    height:500px !important;
-    margin:0;
-  }
-
-  .img-dev{
-    display: flex;
-    justify-content: center;
-    padding: 10px 0 25px 0;
-
-    @include mediumdesktop(){
+    .img-dev{
       display: flex;
-      align-items: center;
       justify-content: center;
-    }
-
-    img{
-      width: 170px;
+      padding: 10px 0 25px 0;
 
       @include mediumdesktop(){
-        width: 180px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      img{
+        width: 170px;
+
+        @include mediumdesktop(){
+          width: 180px;
+        }
       }
     }
   }
 }
 
 .descricao-dev{
-  margin:0 5px;
-
-  @include mediumdesktop(){
-    min-height: 40%;
-  }
-}
-.conteudo-descricao{
-  
-  @include mediumdesktop(){
-    margin: 0 15px;
-  }
   p{
     text-align: center;
     color: $letras;
     font-size: 19px;
-    padding-bottom: 25px;
+    padding: 0 15px 25px 15px;
     
     @include mediumdesktop(){
       text-align: center;
@@ -653,124 +642,62 @@ section.sobremim{
 
 
 /* CONTATO */
-section.contato{
-  height: 100vh;
-  margin-top: 50px;
+.contato{
+  height: 630px;
+  margin-bottom: 50px;
 
-  @include sobreMim(){
-    height: 100vh;
-    margin: 0;
-  }
-  @include desktop(){
-    height: 100vh;
-    margin: 0;
-  }
-
-  h1{
-    @include mediumdesktop(){
-      padding: 0;
-      height: 42px;   
-    }
-  }
-}
-.conteudo-contato{
-  height: calc(625px - 80px);
-  background-color: $conteudo;
-  background-image: url('../image/ilustracao-contato.png');
-  background-repeat:no-repeat ;
-  background-size: contain;
-  background-position: bottom;
-  margin:0 10px;
-  border-radius: 5px;
-
-  @include sobreMim(){
+  .conteudo-contato{
     height: 550px;
-  }
-
-  @include desktop(){
-    height: 500px;
-  }
-
-  @include mediumdesktop(){
-    position: relative;
-    margin: 0;
-  }
-}
-
-.informacoes-contato{
-  @include mediumdesktop(){
+    background-color: $conteudo;
+    margin:0 10px;
     border-radius: 5px;
-    overflow: hidden;
-  }
+    text-align: center;
+    background-image: url('../image/ilustracao-contato.png');
+    background-repeat:no-repeat ;
+    background-size: contain;
+    background-position: bottom;
 
-  .conteudo-informacoes{
-    @include mediumdesktop(){
-      height: calc(100%); width: 100%;
-      padding: 0 0 0 15px;
-      position: relative;
+    @include desktop(){
+      margin: 0;
     }
-
   }
 }
-
-.redes-sociais {
-
-  @include mediumdesktop(){
-     margin-top: 10px;
-     height: 10%;
-     display: flex; 
-     flex-direction: column;
-     gap: 15px;
-  }
-
-  .descricao{
+.informacoes-contato{
   color: $letras;
-  padding:10px 10px;
+  padding:15px 10px 0 10px;
   font-size: 19px;
   text-align: center;
-  }
 }
-
-.conteudo-redessocias{
+.links-contato{
+  height: 400px;
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 60px 60px 60px 60px;
+  grid-template-columns: 1fr;
   place-items: center;
-  gap: 20px;
-  margin:20px 10px;
+  gap: 10px;
+  margin:10px 10px;
 
-  @media (min-width:600px){
-    grid-template-rows: 1fr 1fr !important;
-    grid-template-columns: 1fr 1fr !important;
+  @media (min-width: 600px){
+    grid-template-rows: 60px 60px;
+    grid-template-columns: 1fr 1fr;
+  
   }
-
-  @include mobile(){
-    margin: 0 10px;
-    padding-bottom: 40px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  @include tablet(){
     grid-template-rows: 1fr;
-    gap: 20px;
-  }
-
-  @include sobreMim() {
-    grid-template-rows: 1fr 1fr 1fr 1fr !important;
-    grid-template-columns: 1fr !important;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    place-items: start;
+    margin-top: 10px;
   }
 
   @include desktop(){
-    grid-template-rows: 1fr 1fr 1fr 1fr !important;
-    grid-template-columns: 1fr !important;
-  }
-
-  @include mediumdesktop(){
-    display: grid;
-    grid-template-columns: 1fr 1fr !important;
-    grid-template-rows: 1fr 1fr !important;
+    grid-template-rows: 60px 60px;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
   }
 
   a{
     width: 100%;
-    height: 50px;
+    height: 45px;
     font-size: 18px;
     border-radius: 5px;
     padding: 0 10px 0 10px;
@@ -781,23 +708,7 @@ section.contato{
     text-decoration: none;
     color: $letras;
     
-
-    @media (min-width:600px){
-      height: 40px;
-    }
-
-    @include mediumdesktop(){
-      height: 40px;
-      padding: 0 10px 0 10px;
-      display: flex; 
-      justify-content: center;
-      align-items: center;
-      border-radius: 4px;
-      text-decoration: none;
-      color: $letras;
-    }
-
-  }
+  } 
 }
 
 .link .fa-telegram-plane, .fa-instagram, .fa-linkedin, .fa-envelope{
@@ -841,6 +752,7 @@ section.contato{
   border: #96362c;
 }
 
+
 /* BOTÃO SUBIR */
 .botao-subir{
   height: 50px; width: 50px;
@@ -849,4 +761,3 @@ section.contato{
   bottom: 120px; right: 10px;
   display: none;
 }
-

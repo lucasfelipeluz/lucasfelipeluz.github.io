@@ -1,15 +1,43 @@
-class Conhecimentos {
-  constructor(itensConhecimentos, itensDesktop) {
-    this.itensConhecimentos = itensConhecimentos;
-    this.itensDesktop = itensDesktop;
-  }
+const Conhecimentos = {
 
-  AccordionEHover() {
-    const itensConhecimentos = document.querySelectorAll(this.itensConhecimentos);
-    const itensDesktop = document.querySelectorAll(this.itensDesktop);
+  criarEAdicionarDivConhecimento(habilidade) {
+    const containerMobile = document.querySelector('.tags-conhecimentos');
+    const containerDesktop = document.querySelector('.conteudo-tags');
+    const {
+      nome, icone, descricao, experiencia,
+    } = habilidade;
+
+    const divConhecimentoMobile = `
+      <li data-tag="inativo" data-btn-conteudo="${nome.toLowerCase()}">
+        <div class="header-tag">
+          <span class="icon-tag">
+            <i class="${icone}"></i>
+            </span>${nome}
+        </div>
+        <div class="conteudo-conhecimento-mobile">
+          <p class="descricao-tag">${descricao}</p>
+          <p class="experiencia-tag">${experiencia}</p>
+        </div>
+      </li>
+    `;
+
+    const divConhecimentoDesktop = `
+      <div class="conteudo-tag" data-conteudo="${nome.toLowerCase()}" data-conteudo-visivel="false">
+        <p class="descricao-tag">${descricao}</p>
+        <p class="experiencia-tag">${experiencia}</p>
+      </div>
+    `;
+
+    containerMobile.innerHTML += divConhecimentoMobile;
+    containerDesktop.innerHTML += divConhecimentoDesktop;
+  },
+
+  accordionEHover() {
+    const itensConhecimentos = document.querySelectorAll('li[data-btn-conteudo]');
+    const itensDesktop = document.querySelectorAll('.conteudo-tag');
     const instrucao = document.querySelector('.instrucoes');
 
-    function Accordion(item, indexItem, itens) {
+    function accordion(item, indexItem, itens) {
       function scrollParaOItem(item) {
         if (window.innerWidth <= 991) {
           setTimeout(() => {
@@ -65,82 +93,13 @@ class Conhecimentos {
 
     itensConhecimentos.forEach((item, indexItem, itens) => {
       item.addEventListener('click', () => {
-        Accordion(item, indexItem, itens);
+        accordion(item, indexItem, itens);
       });
     });
 
     checarProporcaoDeTela();
     window.addEventListener('resize', checarProporcaoDeTela);
-  }
-
-  adicionarClasse(elemento, nomeClasse) {
-    elemento.classList.add(nomeClasse);
-  }
-
-  criarElemento(elemento) {
-    return document.createElement(elemento);
-  }
-
-  adicionarDataset(elemento, dataset) {
-    elemento.dataset.tag = 'inativo';
-    elemento.dataset.btnConteudo = `${dataset}`;
-  }
-
-  criarDivConhecimento(habilidade) {
-    const container = document.querySelector('.tags-conhecimentos');
-
-    const criarDivConteudo = (elemento, habilidade) => {
-      const conteudo = this.criarElemento(elemento);
-      this.adicionarDataset(conteudo, habilidade.toLowerCase());
-      return conteudo;
-    };
-
-    const criarHeaderTag = (elemento, iconeSpan, nome) => {
-      const headerTag = this.criarElemento(elemento);
-      this.adicionarClasse(headerTag, 'header-tag');
-
-      const span = this.criarElemento('span');
-      this.adicionarClasse(span, 'icon-tag');
-      span.innerHTML = iconeSpan;
-
-      headerTag.append(span);
-      headerTag.append(nome);
-      return headerTag;
-    };
-
-    const criarDivDescricao = (elemento, descricao, experiencia) => {
-      const divDescricao = this.criarElemento(elemento);
-      this.adicionarClasse(divDescricao, 'conteudo-conhecimento-mobile');
-
-      const containerDescricao = this.criarElemento('p');
-      this.adicionarClasse(containerDescricao, 'descricao-tag');
-      containerDescricao.innerHTML = descricao;
-
-      const containerExperiencia = this.criarElemento('p');
-      this.adicionarClasse(containerExperiencia, 'experiencia-tag');
-      containerExperiencia.innerHTML = experiencia;
-
-      divDescricao.append(containerDescricao);
-      divDescricao.append(containerExperiencia);
-      return divDescricao;
-    };
-
-    const conteudo = criarDivConteudo('li', habilidade.nome);
-    const HeaderTag = criarHeaderTag('div', habilidade.icone, habilidade.nome);
-    const Descricao = criarDivDescricao('div', habilidade.descricao, habilidade.experiencia);
-
-    conteudo.append(HeaderTag);
-    conteudo.appendChild(Descricao);
-    container.append(conteudo);
-  }
-
-  async iniciar() {
-    const arquivo = await fetch('../assets/content/conhecimentos.json');
-    const habilidades = Object.entries(await arquivo.json());
-    habilidades.forEach((habilidade) => this.criarDivConhecimento(habilidade[1]));
-
-    this.AccordionEHover();
-  }
-}
+  },
+};
 
 export default Conhecimentos;
