@@ -4,9 +4,10 @@ footer{
   display: block;
   width: 100%;
   height: 100px;
-  background: linear-gradient(90deg, #109c64 9%, #10b692 31%, #1c568a);
-  background-size: 800% 800%;
-  animation: animacao-footer 10s ease infinite;
+  /* background: linear-gradient(90deg, #109c64 9%, #10b692 31%, #1c568a);
+  background-size: 200% 200%;
+  animation: animacao-footer 10s ease infinite; */
+  background-color: $verde-hover;
   display: flex;
   justify-content: center;
   align-items: center;
