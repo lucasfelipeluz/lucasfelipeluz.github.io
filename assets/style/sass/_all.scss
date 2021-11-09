@@ -124,12 +124,26 @@ section.tela-inicial{
   grid-template-columns: 1fr;
   gap: 20px;
   margin-top: 30px;
+  position: relative;
   
 
   @include mediumdesktop(){
     width: 100%;
     height: 45px;
     margin-top: 25px;
+  }
+
+  p.informacoes-vaga{
+    width: 100%;
+    color: $cor3;
+    text-align: center;
+    position: absolute;
+    bottom: -50%;
+    font-size: 13px;
+
+    @include mediumdesktop(){
+      text-align: start;
+    }
   }
 
   .informacoes-filho{
