@@ -4,15 +4,15 @@ const Conhecimentos = {
     const containerMobile = document.querySelector('.tags-conhecimentos');
     const containerDesktop = document.querySelector('.conteudo-tags');
     const {
-      nome, icone, descricao, experiencia,
+      nome, icone, descricao, experiencia, cor,
     } = habilidade;
 
     const divConhecimentoMobile = `
       <li data-tag="inativo" data-btn-conteudo="${nome.toLowerCase()}">
         <div class="header-tag">
-          <span class="icon-tag">
+          <span class="icon-tag" style="background-color:${cor}">
             <i class="${icone}"></i>
-            </span>${nome}
+          </span>${nome}
         </div>
         <div class="conteudo-conhecimento-mobile">
           <p class="descricao-tag">${descricao}</p>

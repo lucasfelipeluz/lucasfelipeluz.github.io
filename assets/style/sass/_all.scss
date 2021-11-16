@@ -140,9 +140,11 @@ section.tela-inicial{
     position: absolute;
     bottom: -50%;
     font-size: 13px;
+    user-select: none;
 
     @include mediumdesktop(){
-      text-align: start;
+      text-align: center;
+      width: 280px;
     }
   }
 
@@ -159,6 +161,11 @@ section.tela-inicial{
     text-decoration: none;
     color: $cor1;
     font-weight: 800;
+
+
+    &:hover{
+      background-color: $cordestaquehover;
+    }
     
 
     @include mediumdesktop(){
@@ -311,7 +318,7 @@ section.projetos{
       font-weight: 600;
       text-decoration: none;
       color: $cor1;
-      background-color: $verde;
+      background-color: $cordestaque;
       padding: 8px 15px;
       border-radius: 4px;
       width: 45%;
@@ -326,7 +333,7 @@ section.projetos{
   }
 
   .links-projeto a:hover{
-    background-color: $verde-hover;
+    background-color: $cordestaquehover;
   }
 
 }
@@ -459,14 +466,14 @@ section.conhecimentos{
 
 }
 
-/* Cores background dos icones */
-[data-btn-conteudo = "html"] span{background: #DD4B25 !important;}
+/* Testar cores Background */
+/* [data-btn-conteudo = "html"] span{background: #DD4B25 !important;}
 [data-btn-conteudo = "css"] span{background-color: #2A95CA !important;}
 [data-btn-conteudo = "javascript"] span{background: #EFD81D!important;}
 [data-btn-conteudo = "sass"] span{background:#BF4080 !important;}
 [data-btn-conteudo = "bootstrap"] span{background: #7511F1!important;}
 [data-btn-conteudo = "figma"] span{background: #9D56F7!important;}
-[data-btn-conteudo = "react"] span{background:#05A0CA !important;}
+[data-btn-conteudo = "react"] span{background:#05A0CA !important;} */
 
 
 /* Cor borda hover */
@@ -477,7 +484,8 @@ section.conhecimentos{
   [data-btn-conteudo = "sass"]:hover{border-right: 5px solid #BF4080;}
   [data-btn-conteudo = "bootstrap"]:hover{border-right: 5px solid #7511F1;}
   [data-btn-conteudo = "figma"]:hover{border-right: 5px solid #9D56F7;}
-  [data-btn-conteudo = "react"]:hover{border-right: 5px solid #05A0CA;}
+  [data-btn-conteudo = "node.js"]:hover{border-right: 5px solid #76AD64;}
+  [data-btn-conteudo = "sql"]:hover{border-right: 5px solid #4479A1;}
 }
 
 /* Funções Mobile */
@@ -488,7 +496,7 @@ section.conhecimentos{
 [data-tag] .conteudo-conhecimento-mobile p{display: none;}
 
 .tags-conhecimentos li[data-tag = "ativo"]{
-  height: 300px;
+  height: 350px;
   @include desktop(){
     height: 50px;
   }
