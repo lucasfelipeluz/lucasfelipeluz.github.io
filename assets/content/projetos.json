@@ -28,7 +28,8 @@
     "tecnologias":{
       "1":"HTML",
       "2":"CSS",
-      "3":"JavaScript"
+      "3":"JavaScript",
+      "4": "JSON"
     }
   },
   "scrolling-infinito":{
