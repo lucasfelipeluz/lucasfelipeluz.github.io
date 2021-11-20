@@ -7,10 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Controle Financeiro</title>
 
-  <!-- Favicon -->
-  <link rel="icon" href="../../favicon.png"/>
-
-
   <!-- 'KoHo', sans-serif; 'Kanit', sans-serif;'Kodchasan', sans-serif; -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"rel="stylesheet">
@@ -38,7 +34,7 @@
       <i class="fas fa-exclamation"></i>
     </div>
     <div class="mensagem-alerta">
-      <p>Preencha todos os campos!</p>
+      <p data-alerta></p>
     </div>
 
   </div>
@@ -75,11 +71,11 @@
 
           <form action="" id="form">
             <div class="form-control">
-              <input class="input nome" type="text" id="text" placeholder="Nome da transação">
+              <input class="input nome" type="text" id="text" placeholder="Nome da transação" autocomplete="off">
             </div>
 
             <div class="form-control">
-                <input class="input valor" type="number" id="amount" placeholder="Valor">
+                <input class="input valor" type="text" id="amount" placeholder="Valor" autocomplete="off">
             </div>
 
             <div class="form-control">
@@ -115,6 +111,6 @@
 
 
 </body>
-  <script src="script.js"></script>
+  <script src="main.js"></script>
 
 </html>
