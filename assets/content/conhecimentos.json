@@ -34,6 +34,13 @@
     "experiencia":"1 ano de experiência",
     "cor":"#7511F1"
   },
+  "angular":{
+    "nome":"Angular",
+    "icone":"fab fa-angular",
+    "descricao":"Um dos recursos mais conhecidos do mundo, a linguagem SQL (Structured Query Language) é usada para executar comando em bancos de dados relacionais, isto é, baseado em tabelas. Apesar de não ser o único meio utilizado para este fim, certamente, é o mais popular.",
+    "experiencia":"2 meses de experiência",
+    "cor":"#D93648"
+  },
   "node":{
     "nome":"Node.js",
     "icone":"fab fa-node",
@@ -42,17 +49,10 @@
     "cor":"#76AD64"
   },
   "sql":{
-    "nome":"SQL",
+    "nome":"Banco de Dados",
     "icone":"fas fa-database",
     "descricao":"Um dos recursos mais conhecidos do mundo, a linguagem SQL (Structured Query Language) é usada para executar comando em bancos de dados relacionais, isto é, baseado em tabelas. Apesar de não ser o único meio utilizado para este fim, certamente, é o mais popular.",
     "experiencia":"2 meses de experiência",
     "cor":"#4479A1"
-  },
-  "figma":{
-    "nome":"Figma",
-    "icone":"fab fa-figma",
-    "descricao":"O Figma é uma ferramenta de design de interface na qual todo o trabalho é feito através do navegador, logo ela é compatível com Windows, Linux, Chrome e Mac. É multitarefa, ou seja, equipes multidisciplinares podem explorar o mesmo projeto juntas vendo as alterações em tempo real.",
-    "experiencia":"4 meses de experiência",
-    "cor":"#9D56F7"
   }
 }

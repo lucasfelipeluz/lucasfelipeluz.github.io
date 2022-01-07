@@ -64,5 +64,37 @@
       "3":"JavaScript",
       "4":"Fetch API"
     }
+  },
+  "labeca-store":{
+    "titulo":"La Beca Store",
+    "classeTitulo":"projetos-filho",
+    "classeConteudo":"conteudo-projeto-filho",
+    "descricao":"E-Commerce de artigos esportivos. Por enquanto, apenas o back-end está em desenvolvimento.",
+    "classeDescricao":"descricao-projeto",
+    "botoes":{
+      "website":{
+        "conteudo":"WebSite",
+        "url":"project/scrolling-e-filtragem/index.html",
+        "icone":{
+          "0":"fas",
+          "1":"fa-link"
+        }
+      },
+      "codigo":{
+        "conteudo":"Código",
+        "url":"https://github.com/lucasfelipeluz/filtragem-de-posts-e-scrolling-infinito",
+        "icone":{
+          "0":"fab",
+          "1":"fa-github"
+        }
+      }
+    },
+    "classeLinks":"links-projeto",
+    "classeTags":"tags-projeto",
+    "tecnologias":{
+      "1":"Angular",
+      "2":"Node.js",
+      "3":"Express.js"
+    }
   }
 }
