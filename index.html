@@ -2,189 +2,45 @@
 <html lang="pt-br">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio Lucas Luz - Desenvolvedor Full Stack</title>
-  
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio Lucas Luz</title>
+
   <!-- 'KoHo', sans-serif; 'Kanit', sans-serif;'Kodchasan', sans-serif; -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400&family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet">
 
   <!-- Favicon -->
-  <link rel="icon" href="./favicon.png" />
+  <link rel="icon" href="/assets/favicon-0edf3edd.png" />
 
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/style/main.css">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <script type="module" crossorigin src="/assets/index-395538ed.js"></script>
+  <link rel="stylesheet" href="/assets/index-d1258fda.css">
 </head>
+
 <body>
-  <header>
-    <div class="nav-bar">
-      <div class="nav-button">
-        <div class="burger" data-burger="inativo">
-        <div class="burger-button" data-filho-burger="inativo"></div>
-        <div class="burger-button" data-filho-burger="inativo"></div>
-        <div class="burger-button" data-filho-burger="inativo"></div>
-      </div>
-      </div>
-      <div class="nome-portfolio">
-         <p>Portfólio</p>
-      </div>
-
-      <ul class="nav-itens">
-         <li class="nav-item"><a href="projetos" data-target="projetos">Projetos</a></li>
-         <li class="nav-item"><a href="conhecimentos" data-target="conhecimentos">Conhecimentos</a></li>
-         <li class="nav-item"><a href="sobreMim" data-target="sobreMim">Sobre mim</a></li>
-         <li class="nav-item"><a href="contato" data-target="contato">Contato</a></li>
-      </ul>  
-      
-
-      <div class="menu-mobile" data-menu="inativo">
-        <div class="menu-container">
-          
-          <ul class="nav-itens-mobile">
-            <li class="nav-item"><a href="projetos" data-target="projetos">Projetos</a></li>
-            <li class="nav-item"><a href="conhecimentos" data-target="conhecimentos">Conhecimentos</a></li>
-            <li class="nav-item"><a href="sobreMim" data-target="sobreMim">Sobre Mim</a></li>
-            <li class="nav-item"><a href="contato" data-target="contato">Fale Comigo</a></li>
-          </ul>
-
-          <div class="barra-gradiente-mobile"></div>
-        </div>
-        <div class="sair-menu"></div>
-      </div> 
-
-    </div>
-    <div class="barra-gradiente"></div>
-
-  </header>
+  <div id="root"></div>
   
-  <section class="tela1 tela-inicial secao" >
-    <div class="conteudo-inicial">
-      <div class="container-boasvindas">
-
-        <div class="apresentacao">
-          <p class="ola">Olá, meu nome é</p>
-          <p class="meu-nome">Lucas Luz</p>
-          <p class="cargo">Desenvolvedor Full Stack</p>
-        </div>
-        <div class="informacoes">
-          <a class="curriculo informacoes-filho" href="assets/documents/curriculo_lucas_luz.pdf" download><i class="fas fa-file-download"></i>Baixar CV</a>
-          <p class="informacoes-vaga">Atualmente não estou disponível para vagas</p>
-        </div>
-
-      </div>
-
-      <div class="container-ilustracoes">
-
-        <div class="container-svg-desenvolvedor">
-
-          <div class="paisagem">
-            <img src="assets/image/ilustracao.png" alt="Ilustração de Desenvolvedor numa sala." class="paisagem-img">
-          </div>
-
-        </div>
-        
-      </div>
-    </div>
-  </section>
-
-  <section class="projetos secao" data-height >
-
-    <h1 class="titulo-projetos titulo-secao">Projetos</h1>
-
-    <div class="conteudo-projetos"> </div>
-
-  </section>
-
-  <section class="conhecimentos secao" data-height >
-
-    <h1 class="titulo-secao">Conhecimentos</h1>
-
-    <div class="conteudo-conhecimentos">
-
-      <div class="tags-conhecimentos">
-
-        <p class="instrucoes"></p>
-
-
-      </div>
-
-      <div class="conteudo-tags">
-
-      </div>
-      
-    </div>
-    
-  </section>
-  <section class="sobremim-contato">
-
-    <div class="sobremim">
-        <h1 class="titulo-secao">Sobre Mim</h1>
-
-        <div class="conteudo-sobremim">
-
-          <div class="img-dev">
-            <img src="assets/image/img-dev.png" alt="">
-          </div>
-
-          <div class="descricao-dev">
-            <p>
-              Meu nome é Lucas Felipe Luz, sou de Recife - Pernambuco.
-              Comecei a me interessar por programação em 2019 usando o Python, e me apaixonei por
-              Desenvolvimento Web em 2020, e to nele até hoje.
-              Atualmente, sou estágiario na Wipro Limited e além de ser autodidata, faço graduação de Análise e Desenvolvimento
-              de Sistemas, mas nem só de linguagens de programação vive o homem,
-              também estou aprendendo Inglês.
-            </p>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-
-    <div class="contato">
-      <h1 class="titulo-secao">Contato</h1>
-      
-      <div class="conteudo-contato">
-        <p class="informacoes-contato">
-          Se quiser me ajudar, ou até bater um papo sobre programação, não hesite em me chamar.
-        </p>
-        <div class="links-contato">
-          <a href="https://t.me/lucasfelipeluz" target="_blank" class="link-telegram link"><i class="fab fa-telegram-plane"></i> Telegram</a>
-          <a href="https://www.instagram.com/lucasfelipeluz/" target="_blank" class="link-instagram link"><i class="fab fa-instagram"></i>Instagram</a>
-          <a href="https://www.linkedin.com/in/lucasfelipeluz/" target="_blank" class="link-likendin link"><i class="fab fa-linkedin"></i>Linkedin</a>
-          <a href="mailto:lucasfelipeluz.dev@gmail.com"  class="link-gmail link"><i class="fas fa-envelope"></i>Gmail</a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <div class="tester">
-
-  </div>
-
-  <div class="botao-subir"></div>
-
-  <footer >
-
-    <div class="conteudo-footer">
-
-      <p>Orgulhosamente desenvolvido por Lucas Luz</p>
-
-    </div>
-
-  </footer>
-
 </body>
+<!-- <script type="module" src="./main.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+  integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-
-  <script type="module" src="./main.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </html>
