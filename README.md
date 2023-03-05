@@ -24,11 +24,11 @@ O site é composto por 5 seções diferentes:
 ## 🔧 Tecnologias utilizadas
 Para o desenvolvimento deste site utilizei as seguintes tecnologias:
 
-- HTML;
-- CSS;
-- JavaScript;
+- React.ts;
+- Styled Components;
+- Axios;
 - FontAwesome;
-- Sass;
+- Bootstrap;
 
 ---
 
